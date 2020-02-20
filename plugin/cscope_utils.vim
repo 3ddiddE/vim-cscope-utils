@@ -5,10 +5,10 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 function! s:UsingPython2()
-  if has('python')
-    return 1
+  if has('python3')
+    return 0
   endif
-  return 0
+  return 1
 endfunction
 let s:python_until_eof = s:UsingPython2() ? "python << EOF" : "python3 << EOF"
 
